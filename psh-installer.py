@@ -10,7 +10,7 @@ from tkinter.ttk import *
 from tkinter.messagebox import *
 root = Tk()
 
-root.iconphoto(False, tk.PhotoImage(file='./icon.ico'))
+root.iconphoto(False, PhotoImage(file='./icon.ico'))
 root.title("PyShell Installer")
 b=platform.system()
 def e():
