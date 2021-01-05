@@ -6,6 +6,7 @@ Oct Wen 7 2020
 import platform
 import sys
 from tkinter import *
+import os
 from tkinter.ttk import *
 from tkinter.messagebox import *
 root = Tk()
@@ -30,6 +31,8 @@ def e():
             else:
                 print("ERROR:UNKOWN_OPERATING_SYSTEM")
                 exit(code=1)
+        os.remove("psh-installer.py")
+        os.remove("icon.ico")
     else:
         exit()
 
