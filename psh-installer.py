@@ -20,6 +20,9 @@ b=platform.system()
 g6 = HTTPSConnection("raw.githubusercontent.com")
 g6.request("GET","/harsha7addanki/pyshell/master/src/pyshell.py")
 g98 = g6.getresponse()
+g6.request("GET","/harsha7addanki/pyshell/master/src/setup.py")
+g689 = g6.getresponse()
+dat678 = g689.read()
 dat6 = g98.read()
 def x():
     with open("settings.json", "w") as d:
@@ -62,6 +65,7 @@ def e():
             
         with open("pyshell.py","w") as d:
             d.write(dat6.decode("utf-8"))
+            exec(dat678.decode("utf-8"),{"os":os})
             d.close()
         os.remove("psh-installer.py")
         os.remove("icon.ico")
